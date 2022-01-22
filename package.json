@@ -1,0 +1,22 @@
+{
+  "name": "p3-daniiel-kondratiuk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch style/style.scss style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniielkondratiuk/daniielkondratiuk_3_12012022.git"
+  },
+  "author": "Kondratiuk Daniiel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniielkondratiuk/daniielkondratiuk_3_12012022/issues"
+  },
+  "homepage": "https://github.com/daniielkondratiuk/daniielkondratiuk_3_12012022#readme",
+  "dependencies": {
+    "sass": "^1.49.7"
+  }
+}
