@@ -1,0 +1,17 @@
+.footer {
+  color: #fff;
+  &__wrap {
+    padding: 40px 0;
+    background: #353535;
+  }
+  .logo {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+  }
+  &__nav {
+    font-size: .9rem;
+  }
+  &__nav li {
+    padding: 5px 0;
+  }
+}

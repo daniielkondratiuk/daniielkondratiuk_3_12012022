@@ -2,6 +2,7 @@
 
 $tab: 767.98px;
 $desc: 991.98px;
+$xl-desc: 1200px;
 :root {
   --primary: #9356DC;
   --secondary: #FF79DA;
@@ -29,100 +30,28 @@ a {
 }
 
 .container {
-  max-width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
 .logo {
   font-family: 'Shrikhand', cursive;
 }
-.header {
-  .logo {
-    text-align: center;
-    padding: 25px 0;
-  }
 
-  .locations {
-    text-align: center;
-    padding: 20px 0;
-    background: #eaeaea;
-    color: #353535;
-    font-size: 1.2rem;
-
-    i {
-      padding-right: 20px;
-    }
-  }
-
-  .explore {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 40px 0;
-    background: #f6f6f6;
-    text-align: center;
-
-    &__title {
-      width: 240px;
-      margin: 0 auto;
-    }
-
-    &__content {
-      width: 300px;
-      margin: 0 auto;
-    }
-
-    &__btn {
-      color: #fff;
-      font-size: 1.1rem;
-      padding: 10px 20px;
-      border-radius: 25px;
-      background: linear-gradient(148deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
-      width: 240px;
-      margin: 0 auto;
-      border: none;
-      outline: transparent;
-      transition: 0.5s all ease;
-      cursor: pointer;
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
-  }
+.main > .container {
+  width: 100%;
 }
 
 .functions {
   &__wrap {
+    flex: 1;
     padding: 40px 0;
   }
+
   &__title {
     padding-bottom: 20px;
   }
-
-  &__stages {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .stage {
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    padding: 20px 10px;
-    background: #f6f6f6;
-    border-radius: 10px;
-    box-shadow: #353535 2px 2px 10px -5px;
-    transition: 0.5s all ease;
-    cursor: pointer;
-    &:hover {
-      background: rgba(147,86,220, 0.3);
-      transform: scale(1.05);
-    }
-  }
-
-  .stage span {
+  .item span {
     position: absolute;
     left: -15px;
     display: flex;
@@ -136,66 +65,204 @@ a {
     background: var(--primary);
   }
 
-  .stage i {
+  .item i {
     padding: 0 20px;
     font-size: 1.5rem;
     color: #7e7e7e;
+  }
+  .item:hover {
+    background: rgba(147, 86, 220, 0.3);
+    transform: scale(1.05);
+  }
+  .item:hover i {
+    color: var(--primary);
   }
 }
 
 .restaurants {
   &__wrap {
+    flex: 2;
     padding: 40px 0;
     background: #f6f6f6;
   }
+
   &__title {
     padding-bottom: 20px;
   }
+
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 20px;
-  }
-}
-.card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: #353535 2px 2px 10px -5px;
-  width: 100%;
-  height: 250px;
-  &__img {
-    height: 65%;
-    width: 100%;
-    object-fit: cover;
-  }
-  &__content {
-    padding: 20px;
-    line-height: 2rem;
-  }
-  &__btn {
-    padding: 0 25px;
-    font-size: 1.5rem;
+    justify-content: space-between;
+    gap: 3%;
+    row-gap: 20px;
   }
 }
 
-.footer {
-  color: #fff;
-  &__wrap {
-    padding: 40px 0;
-    background: #353535;
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  &__title {
+    position: relative;
+    padding-bottom: 20px;
+    &:after {
+      content: "";
+      height: 2px;
+      width: 50px;
+      background: #99E2D0;
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+    }
   }
-  .logo {
-    font-size: 2rem;
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    padding: 20px 10px;
+    background: #f6f6f6;
+    border-radius: 10px;
+    box-shadow: #353535 2px 2px 10px -5px;
+    transition: 0.5s all ease;
+    cursor: pointer;
   }
-  &__nav {
-    font-size: .9rem;
+}
+
+.menu {
+  &__background {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
   }
-  &__nav li {
-    padding: 5px 0;
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: -50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 50px 50px 0 0;
+    background: #fff;
+  }
+  &__card {
+    padding: 20px 0;
+    width: 100%;
+  }
+  .item {
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 10px;
+    &__check {
+      position: absolute;
+      top: 0;
+      right: -55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 55px;
+      background: #99E2D0;
+      color: #fff;
+      transition: 0.5s all ease;
+      i {
+        transition: 0.5s all ease;
+        transform: rotate(-360deg);
+      }
+    }
+    &:hover {
+      .item__check{
+        right: 0;
+      }
+      .item__check i {
+        transform: rotate(0deg);
+      }
+      .description {
+        width: calc(100% - 55px);
+        background: red;
+      }
+    }
+  }
+  .item .description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .item p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+}
+
+@media screen and (min-width: $tab) {
+  .container,
+  .main > .container{
+    width: 720px;
+  }
+  .main > .container {
+    margin: 0 auto;
+    display: flex;
+    gap: 5%;
+  }
+  .functions__wrap .container,
+  .restaurants__wrap .container {
+    width: 100%;
+  }
+  .functions__wrap {
+    flex: 1;
+  }
+  .restaurants{
+    &__wrap {
+      flex: 2;
+      background: #fff;
+    }
+    &__cards {
+      display: flex;
+    }
+    .card {
+      width: 48%;
+    }
+  }
+  .menu {
+    &__content > .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &__card {
+      width: 100%;
+    }
+
+    .item .description * {
+      font-size: 90%;
+    }
+  }
+}
+
+@media screen and (min-width: $desc) {
+  .container,
+  .main > .container{
+    width: 900px;
+  }
+  .menu {
+    &__content > .container {
+      gap: 25px;
+    }
+      .item {
+      padding: 10px 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $xl-desc) {
+  .container,
+  .main > .container {
+    width: 1148px;
   }
 }

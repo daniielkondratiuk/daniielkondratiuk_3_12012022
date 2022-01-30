@@ -1,0 +1,48 @@
+.header .logo {
+  text-align: center;
+  padding: 25px 0;
+}
+.header .locations {
+  text-align: center;
+  padding: 20px 0;
+  background: #eaeaea;
+  color: #353535;
+  font-size: 1.2rem;
+}
+.header .locations i {
+  padding-right: 20px;
+}
+.header .explore {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0;
+  background: #f6f6f6;
+  text-align: center;
+}
+.header .explore__title {
+  width: 240px;
+  margin: 0 auto;
+}
+.header .explore__content {
+  width: 300px;
+  margin: 0 auto;
+}
+.header .explore__btn {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: linear-gradient(148deg, #ff79da 0%, #9356dc 100%);
+  width: 240px;
+  margin: 0 auto;
+  border: none;
+  outline: transparent;
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+.header .explore__btn:hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=header.css.map */
