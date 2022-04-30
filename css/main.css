@@ -117,6 +117,13 @@ a {
   transition: 0.5s all ease;
   cursor: pointer;
 }
+.list .description,
+.list .stage__description,
+.list .stage__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
 .menu__header {
   display: flex;
@@ -194,6 +201,9 @@ a {
 }
 .menu .item:nth-child(3) {
   animation: fadein 1s ease-in-out 1.5s forwards;
+}
+.menu .item:nth-child(4) {
+  animation: fadein 1s ease-in-out 2s forwards;
 }
 .menu .item__check {
   position: absolute;
@@ -273,7 +283,7 @@ a {
     gap: 20px;
   }
   .menu__card {
-    width: 100%;
+    width: 33%;
   }
   .menu .item .description * {
     font-size: 90%;
